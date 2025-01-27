@@ -1,0 +1,26 @@
+.bg-img{
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(to bottom,rgba(0,0,0,0.3),rgba(0,0,0,0.8)),url('../../../assets/Images/Login.jpg');
+
+    /* background-image: url('../../../assets/Images/Login.jpg'); */
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.main-div{
+    display: flex;
+    flex-direction: row;
+    background: linear-gradient(to right bottom,#76cc82, #e4eae5 );    
+    /* backdrop-filter: blur(50px); */
+    align-items: center;
+    justify-content: space-around;
+    position: absolute;
+    left: 700px;
+    top: 176px;
+    border-radius: 10px;
+    width: 50vw;
+    height: 60vh;
+      
+}
+

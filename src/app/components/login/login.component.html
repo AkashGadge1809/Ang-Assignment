@@ -1,3 +1,46 @@
-<button routerLink="/user">user </button>
+<div class="bg-img">
+  <div class="main-div p-3">
+    <div class="lg-img" >
+      <img class="w-100 h-100 " src="../../../assets/Images/sign_up.png" alt="login">
+    </div>
 
+    <div class="login-container w-50">
+      <h3>Hello Farmer</h3>
+      <form [formGroup]="myForm" (ngSubmit)="onLogin()">
+
+        <div class="mb-3">
+          <label for="username" class="form-label">User Name</label>
+          <input type="text" class="form-control " name="username" id="username" formControlName="username" required>
+        </div>
+
+        <div class="text-danger" *ngIf="myForm.get('fname')?.invalid && myForm.get('fname')?.touched ">First Name is
+          Required</div>
+
+        <div class="mb-3">
+          <label for="pass" class="form-label">Enter Password</label>
+          <input type="password" class="form-control " name="pass" id="pass" formControlName="password" required>
+        </div>
+
+        <div class="text-danger" *ngIf="myForm.get('password')?.invalid && myForm.get('password')?.touched ">Password is
+          Required</div>
+
+          <div class="mb-3">
+            <label for="role" class="form-label"> Choose Role</label>
+            <select class="form-select" aria-label="Default select example" formControlName="role">
+              <option selected >Select Your Role</option>
+              <option value="user">User</option>
+              <option value="admin">Admin</option>            
+            </select>
+          </div>
+          <div class="text-danger" *ngIf="myForm.get('role')?.invalid && myForm.get('role')?.touched ">Role is
+            Required</div>
+
+
+        <button type="submit" class="btn btn-outline-primary me-3 " [disabled]="myForm.invalid">Sign In</button>
+        <span class="span ">Create New Account? <a href="/register">Register</a></span>
+      </form>
+    </div>
+  </div>
  
+
+</div>

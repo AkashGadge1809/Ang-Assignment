@@ -1,0 +1,63 @@
+<div class="main-div">
+    <marquee behavior="scroll" direction="right" scrollamount="10">Welcome to FARMER'S FIELD – From Field To Future! </marquee>
+
+  <div class="reg-div d-flex flex-row p-3 ">
+    <div class="reg-img">
+      
+      <img src="../../../assets/Images/register.png" alt="">
+     
+    </div>
+    <div class="register-container w-50">
+        <h3>Welcome Farmer</h3>
+      <form [formGroup]="regisForm" (ngSubmit)="saveUser()">
+
+        <div class="mb-3">
+          <label for="fname" class="form-label"> Enter First name</label>
+          <input type="text" class="form-control" name="fname" formControlName="fname" id="fname">
+        </div>
+        <div class="text-danger" *ngIf="regisForm.get('fname')?.invalid && regisForm.get('fname')?.touched">First Name
+          is
+          Required</div>
+
+        <div class="mb-3">
+          <label for="lname" class="form-label"> Enter Last name</label>
+          <input type="text" class="form-control" name="lname" formControlName="lname" id="lname">
+        </div>
+        <div class="text-danger" *ngIf="regisForm.get('lname')?.invalid && regisForm.get('lname')?.touched">Last Name is
+          Required</div>
+
+        <div class="mb-3">
+          <label for="uname" class="form-label"> Enter Username</label>
+          <input type="email" class="form-control" name="uname" formControlName="uname" id="uname">
+        </div>
+        <div class="text-danger" *ngIf="regisForm.get('uname')?.invalid && regisForm.get('uname')?.touched">Enter Valid
+          Username</div>
+
+        <div class="mb-3">
+          <label for="pass" class="form-label"> Enter Password</label>
+          <input type="password" class="form-control" name="pass" formControlName="password" id="pass">
+        </div>
+        <div class="text-danger" *ngIf="regisForm.get('password')?.invalid && regisForm.get('password')?.touched">Password is
+          Required</div>
+
+        <div class="mb-3">
+          <label for="role" class="form-label"> Select Role</label>
+          <select class="form-select" aria-label="Default select example" formControlName="role">
+            <option selected >Select Your Role</option>
+            <option value="user">User</option>
+            <option value="admin">Admin</option>            
+          </select>
+        </div>
+        <div class="text-danger" *ngIf="regisForm.get('role')?.invalid && regisForm.get('role')?.touched">Role is
+          Required
+        </div>
+
+        <div>
+          <button type="submit" [disabled]="regisForm.invalid" class="btn btn-primary me-3">Register</button>
+          <span class="span ">Already Have Account? <a href="/login">Login</a></span>
+        </div>
+
+      </form>
+    </div>
+  </div>
+</div>

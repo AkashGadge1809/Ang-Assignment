@@ -1,1 +1,27 @@
-<p>home works!</p>
+<div class="video-container">
+    <video autoplay loop muted class="background-video" src="../../../assets/Images/backvideo.mp4"></video>
+    <div class="overlay-content">
+        <h1>SOW GROW NOURISH </h1>
+        <h3>From Field To Future</h3>
+        <span>Welcome to our farming tool haven, where innovation meets cultivation! At our online store,</span> <br>
+        <span>we strive to equip every farmer with the finest tools for a bountiful harvest. </span>
+    </div>
+</div>
+<h3 class="m-3 text-center">PRODUCTS</h3>
+
+<div class="container w-75">
+    <div class="row mt-5">
+      <div class="col-md-4" *ngFor="let product of products">
+        <div class="card mb-4 ">
+          <img [src]="product.image" class="w-100" alt="{{ product.name }}">
+          <div class="card-body">
+            <h5 class="card-title">{{ product.name }}</h5>
+            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. At, ab!</p>
+            <p class="card-text">Price: ${{ product.price }}</p>
+            <button class="btn btn-primary " routerLink="/product">Know More </button>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
