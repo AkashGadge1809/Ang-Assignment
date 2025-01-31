@@ -1,1 +1,25 @@
-<p>products works!</p>
+
+<div *ngIf="showAlert" class="alert alert-success mt-3" role="alert">
+Product Added SuccessFully To Cart
+</div>
+
+<div class="w-75 rounded-pill  text-center prod-heading">
+    <h3 class="p-2 fs-4">PRODUCTS</h3>
+</div>
+<div class="container ">
+    <div class="row mt-5">
+      <div class="col-md-3 " *ngFor="let product of products">
+        <div class="card mb-4 shadow-lg ">
+          <img [src]="product.image" class="card-height rounded m-1"  alt="{{ product.name }}">
+          <div class="card-body">
+            <h2 class="card-title">{{ product.name }}</h2>
+            <p class="card-text">{{product.desc}}</p>
+            <p class="card-text">Price: ${{ product.price }}</p>
+            <button class="btn btn-outline-success " (click)="buyProduct(product)">Buy Now </button>
+            <button  class="btn btn-outline-danger ms-2" (click)="AddtoCart(product)"> Add To Cart </button>
+
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>

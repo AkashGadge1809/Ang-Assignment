@@ -2,14 +2,18 @@
 html, body {
     margin: 0;
     padding: 0;
+    scroll-behavior: smooth;
     /* overflow: hidden;  */
     height: 100%;
     width: 100%;
     user-select: none;
     background: linear-gradient(to right bottom,#76cc82, #e4eae5 );
+    background-size: cover;
+ 
    
 }
 body::-webkit-scrollbar{
     display: none;
-
 }
+
+

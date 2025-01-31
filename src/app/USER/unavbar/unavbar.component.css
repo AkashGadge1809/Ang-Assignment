@@ -3,9 +3,9 @@
      display: flex;
      justify-content: flex-end;
      /* position: fixed; */
-     /* background: radial-gradient(circle, #84c0d8, #5cd586); */
-     background: transparent;
-     backdrop-filter: blur(20px);
+     background: radial-gradient(circle, #97ffa7, #ffffff);
+     /* background: transparent;
+     backdrop-filter: blur(20px); */
      width: 100%;
      height: 83px;
      z-index: 1;

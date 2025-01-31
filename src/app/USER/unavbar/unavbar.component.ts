@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { RouterModule } from '@angular/router';
+import { Router, RouterModule } from '@angular/router';
+import { UserService } from '../../SERVICES/user.service';
 
 @Component({
   selector: 'app-unavbar',
@@ -10,6 +11,14 @@ import { RouterModule } from '@angular/router';
 })
 export class UnavbarComponent {
 
-  
+  constructor(private router : Router, private user : UserService){
+
+  }
+  logout(){
+
+    this.user.Logout();
+    this.router.navigate(['/login'])
+
+  }
 
 }

@@ -1,1 +1,33 @@
-<p>cart works!</p>
+
+<div class="w-75 rounded-pill text-center prod-heading">
+    <h3 class="p-2 fs-4"><b>YOUR CART</b></h3>
+</div>
+<div class="container mt-5">
+    <table class="table table-responsive-sm mx-auto bg-success">
+        <thead>
+            <tr class="text-center">
+                <th scope="col">Id</th>
+                <th scope="col">Image</th>
+                <th scope="col">Name</th>
+                <th scope="col">Desc</th>
+                <th scope="col">Price</th>
+                <th scope="col">Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let product of products" class="text-center">
+                <th scope="row">{{product.id}}</th>
+                <th scope="row"><img [src]="product.image" class="rounded-" alt="User Image" width="50"></th>
+                <th scope="row">{{product.name}}</th>
+                <th scope="row">{{product.desc}}</th>
+                <th scope="row">{{product.price}}</th>
+                <th scope="row">
+                    <button class="btn btn-outline-success" (click)="buyProduct(product)">Buy Now</button>
+                    <button class="btn btn-outline-danger ms-2" (click)="remove(product.id)">Remove</button>
+                </th>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div class="container text-center"> <button class="btn btn-outline-primary" routerLink="/product">Add More</button></div>
+<router-outlet></router-outlet>

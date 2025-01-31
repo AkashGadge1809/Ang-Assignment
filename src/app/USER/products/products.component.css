@@ -1,0 +1,19 @@
+.card-height{
+
+    height: 200px;
+
+}
+.prod-heading{
+    height: 50px;
+    background-color: white;
+    transform: translate(15% , 50%);
+}
+/* .card {
+    border-radius: 20px;
+}
+.card img {
+    border-radius: 20px;
+    height: 200px;
+    width: 200px;
+
+} */

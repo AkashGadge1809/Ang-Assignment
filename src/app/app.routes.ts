@@ -8,6 +8,8 @@ import { ProductsComponent } from './USER/products/products.component';
 import { RegisterComponent } from './components/register/register.component';
 import { ProfileComponent } from './USER/profile/profile.component';
 import { CartComponent } from './USER/cart/cart.component';
+import { BuyComponent } from './USER/buy/buy.component';
+import { authGuard } from './GUARDS/auth.guard';
 
 export const routes: Routes = [
 
@@ -23,8 +25,8 @@ export const routes: Routes = [
     },
 
     {
-        path:'', component:UnavbarComponent,
-         children:[
+        path:'', component:UnavbarComponent
+         ,children:[
 
             { path:'home', component:HomeComponent},
 
@@ -36,7 +38,9 @@ export const routes: Routes = [
 
             { path:'cart', component:CartComponent},
 
-            { path:'profile', component:ProfileComponent}
+            { path:'profile', component:ProfileComponent},
+
+            { path: 'buy', component: BuyComponent}
             
           
         ]

@@ -11,6 +11,20 @@ export class UserService {
 
   private URL = "http://localhost:3000/user";
   private userdata={}
+  private isLogin= false;
+
+
+  Login(){
+    this.isLogin=true;
+      }
+
+  Logout(){
+    this.isLogin=false;
+  }
+
+  isLoggedIn():boolean{
+    return this.isLogin;
+  }
 
   setuserdata(data:any){
     this.userdata=data

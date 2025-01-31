@@ -40,7 +40,8 @@ export class LoginComponent {
     if(user && user.password == password)
     {
       if(user.role=='user'){
-      this.user.setuserdata(user)
+      this.user.setuserdata(user);
+      this.user.Login()
       this.router.navigate(['/home'],{queryParams:user})
       console.log(user)
     }
