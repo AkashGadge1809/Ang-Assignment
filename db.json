@@ -77,9 +77,9 @@
   ],
   "cart": [
     {
-      "id": "2",
-      "name": "Product 2",
-      "price": 200,
+      "id": "1",
+      "name": "Product 1",
+      "price": 100,
       "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. At, ab!",
       "image": "https://img.freepik.com/premium-vector/gardening-design_24911-42148.jpg?w=740"
     },

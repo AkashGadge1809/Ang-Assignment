@@ -42,7 +42,7 @@ export class LoginComponent {
       if(user.role=='user'){
       this.user.setuserdata(user);
       this.user.Login()
-      this.router.navigate(['/home'],{queryParams:user})
+      this.router.navigate(['/home'])
       console.log(user)
     }
     else if(user.role=='admin')
