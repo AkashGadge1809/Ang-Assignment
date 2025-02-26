@@ -16,6 +16,7 @@ constructor(private cart : CartService,private router : Router) {
 }
 
 products:any[]=[]
+showAlert: boolean = false;
 
 ngOnInit(){
   this.fetchProduct();
@@ -34,9 +35,12 @@ buyProduct(prod:any){
 
 remove(id:string){
   this.cart.deleteProduct(id).subscribe((res)=>{
-    alert('Product Removed')
     this.fetchProduct();
-  })
+    this.showAlert = true; // Show alert
 
+      setTimeout(() => {
+        this.showAlert = false; // Hide alert after 2 seconds
+      }, 2000);
+    })
   }
 }

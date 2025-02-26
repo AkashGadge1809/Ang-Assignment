@@ -1,0 +1,11 @@
+.prod-heading{
+    height: 50px;
+    background-color: white;
+    transform: translate(15% , 50%);
+}
+.order{
+    position: relative;
+    /* left: 250px; */
+    left: 18%;
+    transform: translate(15% , 50%);
+}

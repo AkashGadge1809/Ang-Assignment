@@ -15,6 +15,14 @@
       "uname": "admin@gmail.com",
       "password": "000",
       "role": "admin"
+    },
+    {
+      "id": "dbc5",
+      "fname": "Vinayak",
+      "lname": "Ujalambe",
+      "uname": "vinayak@gmail.com",
+      "password": "000",
+      "role": "user"
     }
   ],
   "product": [
@@ -77,9 +85,9 @@
   ],
   "cart": [
     {
-      "id": "1",
-      "name": "Product 1",
-      "price": 100,
+      "id": "3",
+      "name": "Product 3",
+      "price": 300,
       "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. At, ab!",
       "image": "https://img.freepik.com/premium-vector/gardening-design_24911-42148.jpg?w=740"
     },
@@ -89,6 +97,22 @@
       "price": 100,
       "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. At, ab!",
       "image": "https://img.freepik.com/premium-vector/gardening-design_24911-42148.jpg?w=740"
+    }
+  ],
+  "orders": [
+    {
+      "id": "1",
+      "name": "Product 1",
+      "price": "100",
+      "img": "https://img.freepik.com/premium-vector/gardening-design_24911-42148.jpg?w=740",
+      "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. At, ab!"
+    },
+    {
+      "id": "3",
+      "name": "Product 3",
+      "price": "300",
+      "img": "https://img.freepik.com/premium-vector/gardening-design_24911-42148.jpg?w=740",
+      "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. At, ab!"
     }
   ]
 }

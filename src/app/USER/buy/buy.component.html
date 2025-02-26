@@ -1,1 +1,24 @@
-<p>buy works!</p>
+<div *ngIf="showAlert" class="alert alert-success mt-3" role="alert">
+    Product Ordered SuccessFully check Order History
+    </div>
+
+<div class="w-75 rounded-pill  text-center prod-heading">
+    <h3 class="p-2 fs-4">PRODUCTS</h3>
+</div>
+<div class="order">
+    <div class="card mb-3" style="max-width: 540px;">
+    <div class="row g-0">
+      <div class="col-md-4">
+        <img [src]="products.img" class="img-fluid rounded-start" alt="...">
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h2 class="card-title">{{products.name}}</h2>
+          <p class="card-text">{{products.desc}}</p>
+          <p class="card-text">Price : ${{products.price}}</p>
+          <button class="btn btn-outline-primary" (click)="saveOrder()">Confirm</button><button class="btn btn-outline-danger ms-3" (click)="cancel()">Cancel</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

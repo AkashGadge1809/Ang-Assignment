@@ -7,9 +7,9 @@ import { UserService } from '../../SERVICES/user.service';
 @Component({
   selector: 'app-login',
   standalone: true,
-  imports: [RouterModule,ReactiveFormsModule,FormsModule,CommonModule],
+  imports: [RouterModule, ReactiveFormsModule, FormsModule, CommonModule],
   templateUrl: './login.component.html',
-  styleUrl: './login.component.css'
+  styleUrls: ['./login.component.css'] // Corrected property name
 })
 export class LoginComponent {
 

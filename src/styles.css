@@ -9,7 +9,7 @@ html, body {
     user-select: none;
     background: linear-gradient(to right bottom,#76cc82, #e4eae5 );
     background-size: cover;
- 
+    cursor: pointer;
    
 }
 body::-webkit-scrollbar{

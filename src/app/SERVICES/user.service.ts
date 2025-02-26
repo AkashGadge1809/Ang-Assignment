@@ -20,6 +20,7 @@ export class UserService {
 
   Logout(){
     this.isLogin=false;
+    this.userdata={};
   }
 
   isLoggedIn():boolean{
